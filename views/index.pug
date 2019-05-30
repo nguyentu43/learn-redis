@@ -1,0 +1,38 @@
+doctype html
+head
+    title List Song
+    style.
+        table, tr, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            padding: 5px;
+        }
+body
+    h1 List Song
+
+    table
+        tr
+            th Index
+            th Name
+            th Musician
+            th View
+            th Stats
+        each song, index in songs
+            tr
+                td= index + 1
+                td= song.name
+                td= song.musician
+                td
+                    a(href="/songs/" + song.key) View
+                td
+                    a(href="/stats/songs/" + song.key) Stats
+
+    h3
+        a(href="/stats") Stats Total
+
+    h3
+        a(href="/stats/date") Stats By Date
+        
