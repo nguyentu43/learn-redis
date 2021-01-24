@@ -1,2 +1,2 @@
 ## Learn Redis
-count views
+view counter
